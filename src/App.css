@@ -1,42 +1,197 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+:root {
+  --blue: #007BFF;
+  --light: #F8F9FA;
+  --gunmetal: #2E2E2E;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  color: var(--gunmetal);
+}
+
+/* Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between; 
+  background: var(--gunmetal);
+  color: var(--light);
+  padding: 0 0 0 1rem;
+  border-bottom: 2px solid var(--blue);
+}
+
+.header img {
+  height: 64px;   /* make logo bigger */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-bottom: 2px solid var(--gunmetal);
+}
+
+.tabs a {
+  flex: 1;
+  padding: 0.75rem;
   text-align: center;
+  text-decoration: none;
+  color: var(--gunmetal);
+  transition: all 0.3s;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.tabs a:hover {
+  background: var(--blue);
+  color: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.tabs a.active {
+  border-bottom: 3px solid var(--blue);
+  font-weight: bold;
+}
+
+/* Main content */
+.main {
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+/* About */
+.about {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about img {
+  width: 120px;
+  height: 120px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 900px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.project-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card {
-  padding: 2em;
+.project-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
-.read-the-docs {
-  color: #888;
+.project-card .card-body {
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
 }
+
+.project-card h3 {
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--gunmetal);
+  font-size: 0.95rem;
+}
+
+.project-card .card-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+
+.project-card .github-link {
+  color: var(--gunmetal);
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.3s;
+}
+
+.project-card .github-link:hover {
+  color: var(--blue);
+}
+
+
+.about-contact {
+  margin-top: 1.5rem;
+}
+
+.about-contact .icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-contact .icons a {
+  font-size: 2rem;
+  color: var(--blue);
+  transition: color 0.3s;
+}
+
+.about-contact .icons a:hover {
+  color: var(--gunmetal);
+}
+
+.about-contact a {
+  color: var(--gunmetal);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.about-contact a:hover {
+  color: var(--blue);
+}
+
