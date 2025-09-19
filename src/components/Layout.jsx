@@ -26,8 +26,7 @@ function Layout() {
                     <i className="fab fa-linkedin"></i>
                 </a>
             </div>
-            <p><a href="mailto:djliesenfelt.work@gmail.com">djliesenfelt.work@gmail.com</a></p>
-            <p><a href="mailto:dliesenfelt2022@fau.edu">dliesenfelt2022@fau.edu</a></p>
+            
         </footer>
     </div>
   );

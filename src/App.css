@@ -99,15 +99,11 @@ body {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1rem;
+  overflow: hidden;
   transition: 0.2s;
-  text-decoration: none; 
-  color: inherit; 
-}
-
-.project-card h3 {
-  color: var(--blue);
-  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -116,37 +112,72 @@ body {
   transform: translateY(-2px);
 }
 
-
-/* Footer */
-.footer {
-  background: var(--gunmetal);
-  color: var(--light);
-  text-align: center;
+.project-card .card-body {
   padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
 }
 
-.footer .icons a {
-  font-size: 2.5rem;   
+.project-card h3 {
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--gunmetal);
+  font-size: 0.95rem;
+}
+
+.project-card .card-footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+
+.project-card .github-link {
+  color: var(--gunmetal);
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.3s;
+}
+
+.project-card .github-link:hover {
+  color: var(--blue);
+}
+
+
+.about-contact {
+  margin-top: 1.5rem;
+}
+
+.about-contact .icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-contact .icons a {
+  font-size: 2rem;
   color: var(--blue);
   transition: color 0.3s;
 }
 
-.footer .icons a:hover {
-  color: white;
+.about-contact .icons a:hover {
+  color: var(--gunmetal);
 }
 
+.about-contact a {
+  color: var(--gunmetal);
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-
-.footer a {
-  margin: 0 0.5rem;
-  font-size: 1.2rem;
+.about-contact a:hover {
   color: var(--blue);
 }
-
-.footer p,
-.footer a {
-  color: var(--light);
-  text-decoration: none;
-}
-
 
