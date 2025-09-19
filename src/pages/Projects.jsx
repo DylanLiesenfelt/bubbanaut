@@ -6,17 +6,17 @@ function Projects() {
   ];
 
   return (
-    <section className="grid gap-4 sm:grid-cols-2">
+    <section className="projects">
       {projects.map((proj, idx) => (
         <a
           key={idx}
           href={proj.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-4 border rounded-lg shadow-sm bg-white hover:shadow-md transition"
+          className="project-card"
         >
-          <h3 className="font-semibold">{proj.title}</h3>
-          <p className="text-sm text-gray-600">{proj.desc}</p>
+          <h3>{proj.title}</h3>
+          <p>{proj.desc}</p>
         </a>
       ))}
     </section>

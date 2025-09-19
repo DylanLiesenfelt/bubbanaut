@@ -1,0 +1,152 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+:root {
+  --blue: #007BFF;
+  --light: #F8F9FA;
+  --gunmetal: #2E2E2E;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  color: var(--gunmetal);
+}
+
+/* Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--gunmetal);
+  color: var(--light);
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-bottom: 2px solid var(--gunmetal);
+}
+
+.tabs a {
+  flex: 1;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--gunmetal);
+  transition: all 0.3s;
+}
+
+.tabs a:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.tabs a.active {
+  border-bottom: 3px solid var(--blue);
+  font-weight: bold;
+}
+
+/* Main content */
+.main {
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+/* About */
+.about {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about img {
+  width: 120px;
+  height: 120px;
+  border-radius: 25%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: 0.2s;
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.project-card h3 {
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.project-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+
+/* Footer */
+.footer {
+  background: var(--gunmetal);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer .icons a {
+  font-size: 2.5rem;   
+  color: var(--blue);
+  transition: color 0.3s;
+}
+
+.footer .icons a:hover {
+  color: white;
+}
+
+
+
+.footer a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+
+.footer p,
+.footer a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+
