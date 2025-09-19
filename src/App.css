@@ -21,12 +21,26 @@ body {
 }
 
 .header {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between; 
   background: var(--gunmetal);
   color: var(--light);
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0 0 0 1rem;
+  border-bottom: 2px solid var(--blue);
+}
+
+.header img {
+  height: 64px;   /* make logo bigger */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
   font-weight: bold;
-  text-align: center;
 }
 
 /* Tabs */

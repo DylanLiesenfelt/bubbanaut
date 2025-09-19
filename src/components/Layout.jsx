@@ -5,7 +5,10 @@ function Layout() {
 
   return (
     <div className="app">
-        <header className="header">Bubbanaut</header>
+        <header className="header">
+            <h1>Bubbanaut</h1>
+            <img src="/logo.png" alt="Bubbanaut Logo" />
+        </header>
 
         <nav className="tabs">
             <Link to="/" className={location.pathname === "/" ? "active" : ""}>About</Link>
@@ -16,18 +19,6 @@ function Layout() {
         <main className="main">
             <Outlet />
         </main>
-
-        <footer className="footer">
-            <div className="icons">
-                <a href="https://github.com/DylanLiesenfelt" target="_blank" rel="noreferrer">
-                    <i className="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dylanliesenfelt/" target="_blank" rel="noreferrer">
-                    <i className="fab fa-linkedin"></i>
-                </a>
-            </div>
-            
-        </footer>
     </div>
   );
 }
