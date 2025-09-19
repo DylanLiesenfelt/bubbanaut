@@ -12,7 +12,7 @@ function App() {
       <div className="flex flex-col min-h-screen text-gray-900 bg-gray-50">
         {/* Header */}
         <header className="p-4 shadow-md bg-white sticky top-0 z-10">
-          <h1 className="text-xl font-bold">Dylan Liesenfelt</h1>
+          <h1 className="text-xl font-bold">Bubbanaut</h1>
         </header>
 
         {/* Tabs */}
